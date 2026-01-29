@@ -11,4 +11,5 @@ ENV JAIL_TMP_SIZE="5M"
 
 RUN mkdir /srv/app
 COPY *.c *.h Makefile /srv/app/
-RUN cd /srv/app && make
+COPY program /srv/app/run
+
