@@ -28,4 +28,4 @@ services:
     build:
       context: ./httpserver
     ports:
-      - 3335:8080
+      - 3335:9999
