@@ -9,7 +9,7 @@
 #include <netinet/in.h>
 #include <sys/stat.h>
 
-#define PORT 9999
+#define PORT 8080
 #define BUF_SIZE 1024
 
 void send_response(int client_sock, const char *status, const char *content_type, const char *body) {
