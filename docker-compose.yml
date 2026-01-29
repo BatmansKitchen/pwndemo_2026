@@ -4,7 +4,7 @@ services:
       context: ./basic1
       dockerfile: Dockerfile.run
     ports:
-      - 3333:5000
+      - 0.0.0.0:3333:5000
     security_opt:
       - apparmor:unconfined
       - seccomp:unconfined
@@ -15,7 +15,7 @@ services:
       context: ./basic1
       dockerfile: Dockerfile.gdb
     ports:
-      - 3334:22
+      - 0.0.0.0:3334:22
     cap_add:
       - SYS_PTRACE
     security_opt:
@@ -28,14 +28,14 @@ services:
     build:
       context: ./httpserver
     ports:
-      - 3335:8080
+      - 0.0.0.0:3335:9999
 
   adventure:
     build:
       context: ./ADVENTURE
       dockerfile: Dockerfile
     ports:
-      - 3336:5000
+      - 0.0.0.0:3336:5000
     security_opt:
       - apparmor:unconfined
       - seccomp:unconfined
