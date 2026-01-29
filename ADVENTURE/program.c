@@ -161,6 +161,7 @@ void do_shop(struct Player* player) {
 int main() {
 
     // init stuff
+    setvbuf(stdout, NULL, _IONBF, 0);
 
     // allocate player
     struct Player* player = mem_alloc(sizeof(struct Player));
